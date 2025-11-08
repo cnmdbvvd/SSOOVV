@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		SOV_memories_of_perestroika = {
+			removal_cost = -1
+			picture = The_red_sun_has_just_risen_and_the_path_is_bright_icon
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.15
+                stability_factor = 0.1 
+                consumer_goods_factor = -0.15
+			}
+		}
+		
+	}
+}
