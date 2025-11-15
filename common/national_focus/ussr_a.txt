@@ -1,0 +1,222 @@
+shared_focus = {
+	id = SOV_The_present_is_the_same_as_the_past #今时亦同往日
+	icon = GFX_focus_SOV_The_present_is_the_same_as_the_past
+	x = 10
+	y = 5
+	cost = 3
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = SOV_New_here #初来乍到
+	icon = GFX_focus_SOV_New_here
+	x = 0
+	y = 1
+	cost = 1
+    relative_position_id = SOV_The_present_is_the_same_as_the_past
+	prerequisite = { 
+		focus = SOV_The_present_is_the_same_as_the_past
+	}
+	completion_reward = {
+		SOV = {
+		    country_event = { id = cccp.1 }
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Tactical_and_strategic_changes #战术战略更改
+	icon = GFX_focus_SOV_Tactical_and_strategic_changes
+	x = -2
+	y = 1
+	cost = 2
+    relative_position_id = SOV_New_here
+	prerequisite = { 
+		focus = SOV_New_here
+	}
+	completion_reward = {
+        add_doctrine_cost_reduction = {
+		    name = SOV_Tactical_and_strategic_changes
+		    cost_reduction = 0.75
+		    uses = 1 
+		    category = land_doctrine
+	    }
+		custom_effect_tooltip = USSR_red_army_tt
+        add_to_variable = {
+			army_attack_factor = 0.05
+			tooltip = SOV_army_attack_factor_tt
+		}
+        add_to_variable = {
+			army_defence_factor = 0.05
+			tooltip = SOV_army_defence_factor_tt
+		}
+        add_to_variable = {
+			land_reinforce_rate = 0.05
+			tooltip = SOV_land_reinforce_rate_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Cancel_battalion_level_task_force #取消营级战斗群
+	icon = GFX_focus_SOV_Cancel_battalion_level_task_force
+	x = 0
+	y = 1
+	cost = 3
+    relative_position_id = SOV_Tactical_and_strategic_changes
+	prerequisite = { 
+		focus = SOV_Tactical_and_strategic_changes
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_red_army_tt
+        add_to_variable = {
+			army_attack_factor = 0.1
+			tooltip = SOV_army_attack_factor_tt
+		}
+        add_to_variable = {
+			army_defence_factor = 0.1
+			tooltip = SOV_army_defence_factor_tt
+		}
+        add_to_variable = {
+			army_org_factor = 0.05
+			tooltip = SOV_army_org_factor_tt
+		}
+        add_to_variable = {
+			combat_width_factor = -0.1
+			tooltip = SOV_combat_width_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Strengthen_integrated_chemical_exercises #加强合成化演习
+	icon = GFX_focus_SOV_Strengthen_integrated_chemical_exercises
+	x = 0
+	y = 1
+	cost = 5
+    relative_position_id = SOV_Cancel_battalion_level_task_force
+	prerequisite = { 
+		focus = SOV_Cancel_battalion_level_task_force
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_red_army_tt
+        add_to_variable = {
+			army_armor_attack_factor = 0.1
+			tooltip = SOV_army_armor_attack_factor_tt
+		}
+        add_to_variable = {
+			army_armor_defence_factor = 0.1
+			tooltip = SOV_army_armor_defence_factor_tt
+		}
+        add_to_variable = {
+			mechanized_attack_factor = 0.15
+			tooltip = SOV_mechanized_attack_factor_tt
+		}
+        add_to_variable = {
+			mechanized_defence_factor = 0.15
+			tooltip = SOV_mechanized_defence_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Continue_deep_operations #继续大纵深作战
+	icon = GFX_focus_SOV_Continue_deep_operations
+	x = 0
+	y = 1
+	cost = 5
+    relative_position_id = SOV_Strengthen_integrated_chemical_exercises
+	prerequisite = { 
+		focus = SOV_Strengthen_integrated_chemical_exercises
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_red_army_tt
+        add_to_variable = {
+			combat_width_factor = -0.2
+			tooltip = SOV_combat_width_factor_tt
+		}
+        add_to_variable = {
+			army_attack_factor = 0.15
+			tooltip = SOV_army_attack_factor_tt
+		}
+        add_to_variable = {
+			army_defence_factor = 0.15
+			tooltip = SOV_mechanized_attack_factor_tt
+		}
+        add_to_variable = {
+			land_doctrine_cost_factor = -0.2
+			tooltip = SOV_land_doctrine_cost_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Continue_to_stay_in_the_reserves #继续保持预备役
+	icon = GFX_focus_SOV_Continue_to_stay_in_the_reserves
+	x = 0
+	y = 1
+	cost = 2
+    relative_position_id = SOV_New_here
+	prerequisite = { 
+		focus = SOV_New_here
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_red_army_tt
+        add_to_variable = {
+			training_time_army_factor = -0.2
+			tooltip = SOV_training_time_army_factor_tt
+		}
+        add_to_variable = {
+			conscription_factor = 0.1
+			tooltip = SOV_conscription_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Eliminate_paramilitary_organizations #消除准军事组织
+	icon = GFX_focus_SOV_Eliminate_paramilitary_organizations
+	x = 0
+	y = 1
+	cost = 4
+    relative_position_id = SOV_Continue_to_stay_in_the_reserves
+	prerequisite = { 
+		focus = SOV_Continue_to_stay_in_the_reserves
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_red_army_tt
+        add_to_variable = {
+			training_time_army_factor = -0.05
+			tooltip = SOV_training_time_army_factor_tt
+		}
+        add_to_variable = {
+			army_morale_factor = 0.05
+			tooltip = SOV_army_morale_factor_tt
+		}
+        add_to_variable = {
+			army_morale_factor = 0.05
+			tooltip = SOV_army_morale_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Launch_a_two_year_compulsory_military_service_system #启动两年义务兵制度
+	icon = GFX_focus_SOV_Launch_a_two_year_compulsory_military_service_system
+	x = 0
+	y = 1
+	cost = 4
+    relative_position_id = SOV_Eliminate_paramilitary_organizations
+	prerequisite = { 
+		focus = SOV_Eliminate_paramilitary_organizations
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_red_army_tt
+        add_to_variable = {
+			conscription_factor = 0.25
+			tooltip = SOV_conscription_factor_tt
+		}
+        add_to_variable = {
+			experience_loss_factor = -0.15
+			tooltip = SOV_experience_loss_factor_tt
+		}
+        add_to_variable = {
+			training_time_army_factor = -0.2
+			tooltip = SOV_training_time_army_factor_tt
+		}
+	}
+}
