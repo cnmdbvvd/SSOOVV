@@ -167,3 +167,129 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = cccp.10 #前阿富汗部队的现状
+	title = cccp.10.t
+	desc = cccp.10.d
+	picture = GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi
+	is_triggered_only = yes
+	option = {
+		name = cccp.10.c
+		war_support_factor = -0.05
+		custom_effect_tooltip = USSR_red_army_tt
+		add_to_variable = {
+			USSR_army_org_factor = -0.2
+			tooltip = army_org_factor_tt
+		}
+		completion_reward = {
+			SOV = {
+				country_event = { id = cccp.11 days = 20 }
+			}
+		}
+	}
+}
+country_event = {
+	id = cccp.11 #破碎的国防工业
+	title = cccp.11.t
+	desc = cccp.11.d
+	picture = GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi
+	is_triggered_only = yes
+	option = {
+		name = cccp.11.c
+		war_support_factor = -0.05
+		add_dynamic_modifier = { modifier = USSR_Fragmented_defense_industry }
+		set_variable = {CCCP_line_change_production_efficiency_factor = -0.15}
+		set_variable = {CCCP_production_factory_max_efficiency_factor = -0.2}
+		set_variable = {CCCP_production_factory_efficiency_gain_factor = -0.2}
+		set_variable = {CCCP_industrial_capacity_factory = -0.2}
+		set_variable = {CCCP_consumer_goods_expected_value = -0.2}
+		set_variable = {CCCP_civilian_factory_use = 5}
+		set_variable = {CCCP_research_speed_factor = -0.25}
+		completion_reward = {
+			SOV = {
+				country_event = { id = cccp.12 days = 20 }
+			}
+		}
+	}
+}
+country_event = {
+	id = cccp.12 #旧日的军改
+	title = cccp.12.t
+	desc = cccp.12.d
+	picture = GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi
+	is_triggered_only = yes
+	option = {
+		name = cccp.12.a
+		completion_reward = {
+			SOV = {
+				country_event = { id = cccp.13 days = 20 }
+			}
+		}
+	}
+}
+country_event = {
+	id = cccp.13 #一团糟的指挥系统
+	title = cccp.13.t
+	desc = cccp.13.d
+	picture = GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi
+	is_triggered_only = yes
+	option = {
+		name = cccp.13.a
+		custom_effect_tooltip = USSR_red_army_tt
+		add_to_variable = {
+			USSR_army_core_attack_factor = -0.15
+			tooltip = army_core_attack_factor_tt
+		}
+		add_to_variable = {
+			USSR_army_core_defense_factor = -0.15
+			tooltip = army_core_defense_factor_tt
+		}
+		completion_reward = {
+			SOV = {
+				country_event = { id = cccp.14 days = 20 }
+			}
+		}
+	}
+}
+country_event = {
+	id = cccp.14 #一团糟的指挥系统
+	title = cccp.14.t
+	desc = cccp.14.d
+	picture = GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi
+	is_triggered_only = yes
+	option = {
+		name = cccp.14.a
+		add_ideas = SOV_Backward_technical_equipment
+		completion_reward = {
+			SOV = {
+				country_event = { id = cccp.15 days = 20 }
+			}
+		}
+	}
+}
+country_event = {
+	id = cccp.15 #亚佐夫的认罪
+	title = cccp.15.t
+	desc = cccp.15.d
+	picture = GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi
+	is_triggered_only = yes
+	option = {
+		name = cccp.15.a
+		add_manpower = -1
+		remove_advisor_role = {
+            character = SOV_dmitry_yazov
+            slot = political_advisor
+        }
+	}
+}
+
+country_event = {
+	id = cccp.16 #伊万诺夫的第一份报告
+	title = cccp.16.t
+	desc = cccp.16.d
+	picture = GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi
+	is_triggered_only = yes
+	option = {
+		name = cccp.16.a
+    }
+}
