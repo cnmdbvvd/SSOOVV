@@ -50,6 +50,18 @@ USSR_red_army = {
 	army_core_defense_factor = USSR_army_core_defense_factor
 	army_strength_factor = USSR_army_strength_factor
 	command_power_gain_mult = USSR_command_power_gain_mult
+	org_loss_when_moving = USSR_org_loss_when_moving
+	land_reinforce_rate = USSR_land_reinforce_rate
+	land_doctrine_cost_factor = USSR_land_doctrine_cost_factor
+	training_time_factor = USSR_training_time_factor
+	minimum_training_level = USSR_minimum_training_level
+	conscription_factor = USSR_conscription_factor
+	experience_loss_factor = USSR_experience_loss_factor
+	army_armor_attack_factor = USSR_army_armor_attack_factor
+	army_armor_defence_factor = USSR_army_armor_defence_factor
+	mechanized_attack_factor =USSR_mechanized_attack_factor
+	mechanized_defence_factor = USSR_mechanized_defence_factor
+	combat_width_factor = USSR_combat_width_factor
 }
 USSR_Socialist_planned_economy = {
 	enable = { always = yes }
